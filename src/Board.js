@@ -35,11 +35,9 @@ class Chekers extends React.Component {
   render() {
     return (
       <>
-        <container>
-          <section className="banner">
-            <img src="/scale.jpeg" />
-          </section>
-        </container>
+        <section className="banner" style={{backgroundImage:"url(/scale.jpeg)"}}>
+          
+        </section>
         <section className="board">
           <table>
             <tbody>
