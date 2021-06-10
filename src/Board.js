@@ -120,6 +120,7 @@ class Chekers extends React.Component {
           <section className="banner" style={{backgroundImage:"url(/scale.jpeg)"}}> 
           </section>
           <section className="board">
+            <h1>CHECKERS</h1>
             <table>
               <tbody>
                 {

@@ -1,19 +1,31 @@
 .board{
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 51%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   transform: translate(-50%, -50%);
 }
 
+h1{
+  text-align: center;
+  color: #fff;
+  font-family: "Avengeance Heroic Avenger", sans-serif;
+  font-size: 60px;
+  margin: 20px auto 10px auto;
+  text-shadow: 2px 2px black;
+
+}
+
 td{
-  border: 2px solid #000;
-  width: 3vw;
-  height: 3vw;
+  border: 0.5px solid #000;
+  width: 4vw;
+  height: 4vw;
 }
 
 table{
+  border: 3px solid rgb(195, 56, 56);
   position: relative;
   border-spacing: 0;
 }
@@ -28,8 +40,8 @@ tr:nth-child(2n) td:nth-child(2n), td:nth-child(n){
 }
 
 img{
-  height: 2.8vw;
-  width: 2.8vw;
+  height: 3.8vw;
+  width: 3.8vw;
   text-align: center;
 }
 
@@ -40,3 +52,4 @@ img{
   background-size: cover;
   background-position: center;
 }
+
