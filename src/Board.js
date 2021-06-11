@@ -31,12 +31,36 @@ class Chekers extends React.Component {
         ["i"," ","i"," ","i"," ","i"," "]
       ],
       player: "i",
-      possibleMoves: [[], []],
+      moves: [],
     }
   }
 
   selectPart(line, column, player) {
     //Registrar linha e coluna onde a peça se encontra.
+    let moves = [];
+    if (this.state.board[line][column] === this.state.player && this.state.player === "i") {
+      if (this.state.board[line - 1][column - 1] === " "){
+        moves.push([line - 1, column - 1])
+        console.log(moves)
+      }
+
+      if (this.state.board[line - 1][column + 1] === " "){
+        moves.push([line -1, column + 1])
+        console.log(moves)
+      }
+    }
+    if (this.state.board[line][column] === this.state.player && this.state.player === "c") {
+      if (this.state.board[line + 1][column - 1] === " "){
+        moves.push([line + 1, column - 1])
+        console.log(moves)
+      }
+      
+      if (this.state.board[line + 1][column + 1] === " "){
+        moves.push([line + 1, column + 1])
+        console.log(moves)
+      }
+    }
+    this.setState({moves})
   }
 
   possibleMoves(line, column, player) {
@@ -53,6 +77,7 @@ class Chekers extends React.Component {
 
 
   render() {
+    console.log(this.state.moves)
     return (
       <>
         <div className="container">
@@ -60,14 +85,14 @@ class Chekers extends React.Component {
           </section>
           <section className="board">
             <h1>CHECKERS</h1>
-            <table>
+            <table className="table">
               <tbody>
                 {
                   this.state.board.map((line, i) => (
                     <tr key={i}>
                       {
-                        line.map((cell, j) => (
-                          <td key={j}>
+                        line.map((column, j) => (
+                          <td className={this.state.moves.some(e => e[0] === i && e[1] === j) ? "highlight" : ""} key={j} onClick={() => this.selectPart(i, j, this.state.player)}>
                               {
                                 this.state.board[i][j] === 'c' ? <img src='/icon_captain.png' alt='captain_america' /> 
                                   : this.state.board[i][j] === 'i' ? <img src='/icon_ironman.png' alt='iron_man' /> : ' '

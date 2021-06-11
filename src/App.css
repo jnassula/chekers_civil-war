@@ -19,7 +19,7 @@ h1{
 }
 
 td{
-  border: 0.5px solid #000;
+  border: 0.1px solid #000;
   width: 4vw;
   height: 4vw;
 }
@@ -51,4 +51,8 @@ img{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.table tr > td.highlight{
+  background: rgb(105, 187, 235);
 }
