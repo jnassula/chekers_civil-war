@@ -14,7 +14,7 @@ h1{
   font-family: "Avengeance Heroic Avenger", sans-serif;
   font-size: 60px;
   margin: 20px auto 10px auto;
-  text-shadow: 2px 2px black;
+  text-shadow: 3px 3px black;
 
 }
 
@@ -52,4 +52,3 @@ img{
   background-size: cover;
   background-position: center;
 }
-
